@@ -23,9 +23,9 @@ jobs:
           sass scss:css
       - name: move_files
         run: |
-          mkdir public
-          cp -R * ./public
-          rm -rf ./public/public
+          rsync -Rr ./*.html ./public
+          rsync -Rr ./css ./public
+          rsync -Rr ./js ./public
       - name: Commit files
         run: |
           cd $PUBLISH_DIR
