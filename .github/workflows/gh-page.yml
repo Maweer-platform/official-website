@@ -31,7 +31,8 @@ jobs:
           git init
           git config --local user.name githubaction
           git config --local user.email githubaction@fake.com
-          git remote add origin https://$MY_SECRET@github.com/$GITHUB_REPOSITORY.git
+          git remote add origin https://$MY_SECRET@github.com/Mashar-io/official-website.git
+          echo $MY_SECRET and $GITHUB_REPOSITORY
           git checkout -b gh-pages
           git add .
           git commit "gh-pages"
