@@ -25,7 +25,6 @@ jobs:
           sass scss:css
       - name: Commit files
         run: |
-          git init
           git config --local user.name $USER_NAME
           git config --local user.email $USER_EMAIL
           git status
