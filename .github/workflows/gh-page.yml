@@ -25,7 +25,6 @@ jobs:
         run: |
           rsync -Rr ./*.html ./public
           rsync -Rr ./css ./public
-          rsync -Rr ./js ./public
       - name: Commit files
         run: |
           cd $PUBLISH_DIR
