@@ -8,8 +8,6 @@ jobs:
     name: Build and deploy gh-pages
     env:
       MY_SECRET: ${{secrets.ACTION_SECRET}}
-      USER_NAME: githubaction
-      USER_EMAIL: githubaction@fake.com
       PUBLISH_DIR: ./
     runs-on: ubuntu-latest
     strategy:
@@ -25,8 +23,8 @@ jobs:
           sass scss:css
       - name: Commit files
         run: |
-          git config --local user.name $USER_NAME
-          git config --local user.email $USER_EMAIL
+          git config --local user.name githubaction
+          git config --local user.email githubaction@fake.com
           git status
           git checkout -b gh-pages
           git push origin gh-pages
