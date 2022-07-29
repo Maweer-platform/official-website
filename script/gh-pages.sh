@@ -5,6 +5,7 @@ sass scss:css
 rsync -Rr ./*.html ./public
 rsync -Rr ./css ./public
 rsync -Rr ./javascript/ ./public/
+rsync -Rr ./assets/ ./public/
 cd public
 git checkout gh-pages
 git add .
