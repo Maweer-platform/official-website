@@ -1,3 +1,148 @@
+@mixin phone {
+  @media screen and (max-width: 655px) {
+    @content;
+  }
+}
 .section {
   padding: 10px;
+}
+
+#fullpage {
+  .reveal {
+    transform: translateY(-150px);
+    opacity: 0;
+    transition: 1s;
+  }
+  .active .reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .letter {
+    letter-spacing: normal;
+  }
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  .left {
+    h1 {
+      color: #ff4f4f;
+      font-size: 2.8rem;
+      font-weight: 500;
+    }
+    h3 {
+      color: #bebebe;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+  .right {
+    margin-left: 50px;
+    img {
+      width: 300px;
+      max-width: 80vw;
+    }
+  }
+
+  @include phone() {
+    flex-direction: column;
+    > .left,
+    > .right {
+      margin: 0 0 0 0;
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 100;
+    color: #ededed;
+    > span {
+      color: #ff4f4f;
+      font-weight: 300;
+    }
+  }
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    margin-bottom: 70px;
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 200;
+    text-align: center;
+  }
+  .applications {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .app {
+      margin: 10px;
+      background-color: #ff4f4f;
+      padding: 20px 35px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-align: center;
+    }
+    @include phone() {
+      .app {
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+.section6 {
+  align-items: center;
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ededed;
+    font-weight: 400;
+    span {
+      font-weight: 300;
+      color: #ff4f4f;
+    }
+  }
+  input {
+    margin-top: 50px;
+    width: 280px;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #373737;
+    outline: none;
+    color: #fff;
+    text-align: center;
+  }
+  input[type="button"] {
+    width: 150px;
+    margin-top: 20px;
+    background-color: #ff4f4f;
+    font-size: 1.2rem;
+    padding: 8px;
+    cursor: pointer;
+  }
 }

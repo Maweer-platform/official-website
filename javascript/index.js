@@ -49,7 +49,6 @@ new fullpage("#fullpage", {
     '<div class="fp-arrow"></div>',
   ],
   verticalCentered: true,
-  sectionsColor: ["#ccc", "#fff"],
   paddingTop: "3em",
   paddingBottom: "10px",
   fixedElements: "#header, .footer",
@@ -62,7 +61,7 @@ new fullpage("#fullpage", {
   dropEffectOptions: { speed: 2300, color: "#F82F4D", zIndex: 9999 },
   waterEffect: false,
   waterEffectOptions: { animateContent: true, animateOnMouseMove: true },
-  cards: false,
+  cards: true,
   cardsOptions: { perspective: 100, fadeContent: true, fadeBackground: true },
 
   // Custom selectors
@@ -71,8 +70,11 @@ new fullpage("#fullpage", {
 
   lazyLoading: true,
   observer: true,
-  credits: { enabled: true, label: "Made with fullPage.js", position: "right" },
-
+  credits: {
+    enabled: false,
+    label: "Copyright &copy; 2022 Mashar All Rights Reserved",
+    position: "right",
+  },
   // Events
   beforeLeave: function (origin, destination, direction, trigger) {},
   onLeave: function (origin, destination, direction, trigger) {},
