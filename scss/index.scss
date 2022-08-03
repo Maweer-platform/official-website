@@ -159,3 +159,29 @@
     cursor: pointer;
   }
 }
+
+.section7 {
+  .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    .comBtn {
+      padding: 8px;
+      background-color: #373737;
+      color: #747474;
+      font-size: 48px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: 0.2s;
+      text-decoration: none;
+      &:hover {
+        transform: scale(110%);
+        color: #fc5757de;
+      }
+    }
+  }
+}
