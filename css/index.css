@@ -55,6 +55,19 @@
   }
 }
 
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.slide iframe {
+  width: 1440px;
+  height: 890px;
+  max-height: 57.8571428571vw;
+  max-width: 90vw;
+}
+
 .description {
   display: flex;
   align-items: center;
