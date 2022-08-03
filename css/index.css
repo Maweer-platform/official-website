@@ -55,6 +55,19 @@
   }
 }
 
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.slide iframe {
+  width: 1440px;
+  height: 890px;
+  max-height: 57.8571428571vw;
+  max-width: 90vw;
+}
+
 .description {
   display: flex;
   align-items: center;
@@ -137,6 +150,30 @@
   font-size: 1.2rem;
   padding: 8px;
   cursor: pointer;
+}
+
+.section7 .links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.section7 .links .comBtn {
+  padding: 8px;
+  background-color: #373737;
+  color: #747474;
+  font-size: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.section7 .links .comBtn:hover {
+  transform: scale(110%);
+  color: rgba(252, 87, 87, 0.8705882353);
 }
 
 /*# sourceMappingURL=index.css.map */
